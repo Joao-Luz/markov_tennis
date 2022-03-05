@@ -79,10 +79,10 @@ def simulate_tie_break(p : float):
 
         if pa >= 7 and pb <= pa-2:
             states.append('win_a')
-            return (states, points)
+            return ('a', states, points)
         elif pb >= 7 and pa <= pb-2:
             states.append('win_b')
-            return (states, points)
+            return ('b', states, points)
 
         states.append('tie-break')
 
@@ -111,8 +111,9 @@ def simulate_set(p : float):
             set_winner = 'b'
             break
         elif a_games == b_games == 6:
-            states, points = simulate_tie_break(p)
+            winner, states, points = simulate_tie_break(p)
             games.append([states, points])
+            set_winner = winner
             break
     
     return set_winner, games
@@ -136,12 +137,12 @@ def simulate_match(p : float, n : int = 1):
             sets.append(games)
 
             game += 1
+
         winner = 'a' if a_wins == 2 else 'b'
         if winner == 'a': win_a += 1
         if winner == 'b': win_b += 1
         matches.append(sets)
     
-    print(win_a, win_b)
     return matches
 
 def simulate_matches(output_dir, p, n):
