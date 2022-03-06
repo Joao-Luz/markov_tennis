@@ -21,3 +21,6 @@ def win_set(p):
 
 def win_match(p):
   return match_probability(p)
+
+def prob_n_outof(i, n, p):
+    return comb(n, i)*p**i*(1-p)**(n-i)
