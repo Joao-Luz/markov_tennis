@@ -1,3 +1,5 @@
+from scipy.special import comb
+
 def game_probability(p):
   return p**4 + 4*(p**4)*(1-p) + 10*(p**4)*(1-p)**2 + (20*(p**5)*(1-p)**3)/(1 - 2*p*(1-p))
 
