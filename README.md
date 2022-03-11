@@ -52,9 +52,13 @@ Um exemplo de arquivo de saída é:
 
 ## Metodologia
 
-Duas partidas foram simuladas com `n=50` cada. A primeira representa uma situação em que um jogador é muito melhor que o outro ($p=0.75$ e $q=0.25$). A segunda partida representa uma situação em que ambos os jogadores possuem habilidades similares ($p=0.5$ e $q=0.5$).
+Duas partidas foram simuladas com `n=50` cada. A primeira representa uma situação em que um jogador é muito melhor que o outro ($p=0.75$ e $q=0.25$). A segunda partida representa uma situação em que ambos os jogadores possuem habilidades similares ($p=0.52$ e $q=0.48$).
 
 Para cada caso, vamos analisar:
 
 - A probabilidade de um jogador ganhar a partida;
 - A distribuição do número de sets, games
+
+## Resultados
+
+Os resultados podem ser vistos no notebook `trab.ipynb`. Nele, mostramos alguns comentários dos resultados, além de algum gráficos que ajudam na análise.
